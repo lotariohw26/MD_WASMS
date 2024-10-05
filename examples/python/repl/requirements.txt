@@ -1,4 +1,1 @@
-altair
-anywidget
-palmerpenguins
-jsonschema
+shiny

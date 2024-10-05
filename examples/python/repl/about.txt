@@ -1,2 +1,2 @@
-altair
-Interactive plot with altair
+repl
+Repl for python

@@ -197,5 +197,3 @@ def pareq(ste='(x + y*zeta)/(zeta + 1)', **kwargs):
 
 # pareq(ste='(a + b)*c', a=2, b=4, c=3)
 
-
-

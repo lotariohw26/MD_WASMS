@@ -4,50 +4,7 @@
     "examples": [
       {
         "category": "Basic",
-        "apps": ["basic_app", "app_with_plot"]
-      },
-      {
-        "category": "Featured",
-        "apps": ["cpuinfo", "regularization", "plotly", "altair", "ipyleaflet"]
-      },
-      {
-        "category": "Intermediate",
-        "apps": [
-          "multiple_source_files",
-          "read_local_csv_file",
-          "file_upload",
-          "insert_ui",
-          "input_update",
-          "extra_packages",
-          "fetch"
-        ]
-      },
-      {
-        "category": "Reactivity",
-        "apps": [
-          "reactive_event",
-          "reactive_effect",
-          "reactive_calc",
-          "reactive_value"
-        ]
-      },
-      {
-        "category": "Shiny Core",
-        "apps": [
-          "file_download_core",
-          "modules",
-          "orbit",
-          "wordle",
-          "static_content"
-        ]
-      },
-      {
-        "category": "Interactive plots",
-        "apps": [
-          "plot_interact_basic",
-          "plot_interact_select",
-          "plot_interact_exclude"
-        ]
+        "apps": ["basic_app", "app_with_plot","repl"]
       },
       {
         "category": "Non-Apps",
