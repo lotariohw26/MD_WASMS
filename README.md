@@ -4,10 +4,11 @@ Shinylive
 examples/index.json
 examples/python/repl/about.txt
 examples/python/repl/app.py
-
-# examples/
-
-
+examples/python/repl/abc.py", ov
+examples/r/001-hello/app.R
+examples/r/002-text/app.R
+examples/r/003-reactivity/app.R
+examples/r/004-mpg/app.R
 
 Code for deploying Shiny applications that will run completely in the browser, using Pyodide and webR (Python and R compiled to WebAssembly).
 
