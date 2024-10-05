@@ -51,7 +51,10 @@
       },
       {
         "category": "Non-Apps",
-        "apps": ["hello_world"]
+        "apps": [
+		"hello_world",
+		"repl"
+	]
       }
     ]
   },

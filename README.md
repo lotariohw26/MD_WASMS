@@ -1,6 +1,14 @@
 Shinylive
 ==========
 
+examples/index.json
+examples/python/repl/about.txt
+examples/python/repl/app.py
+
+# examples/
+
+
+
 Code for deploying Shiny applications that will run completely in the browser, using Pyodide and webR (Python and R compiled to WebAssembly).
 
 * Current semi-stable version (deployed from `deploy` branch of this repo):
