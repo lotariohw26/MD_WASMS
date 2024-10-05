@@ -7,7 +7,7 @@
         "apps": ["basic_app", "app_with_plot","repl"]
       },
       {
-        "category": "Non-Apps",
+        "category": "REPL",
         "apps": [
 		"hello_world",
 		"repl"
