@@ -3,10 +3,6 @@
     "engine": "python",
     "examples": [
       {
-        "category": "Basic",
-        "apps": ["basic_app", "app_with_plot","repl"]
-      },
-      {
         "category": "REPL",
         "apps": [
 		"hello_world",
