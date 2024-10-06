@@ -1,6 +1,5 @@
 Shinylive
 ==========
-
 examples/index.json
 examples/python/repl/about.txt
 examples/python/repl/app.py
