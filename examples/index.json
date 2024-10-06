@@ -5,6 +5,7 @@
       {
         "category": "REPL",
         "apps": [
+		"hello_world",
 		"repl"
 	]
       }
