@@ -1,3 +1,5 @@
 sympy 
 pandas 
 numpy
+polysolver
+math
