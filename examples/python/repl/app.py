@@ -1,4 +1,4 @@
-import sympy, pandas, numpy, math, polysolver
+import sympy, pandas, numpy, math
 from sympy import solve, Eq, symbols, latex, simplify, diff, poly, sympify, Matrix, pprint, collect, expand, Poly, Symbol, Pow
 def rall(sel=[0, 0, 0]):
     n, m = symbols('n m')
@@ -253,6 +253,8 @@ df_results = pandas.DataFrame(results)
 # Output
 a1, a2, a3, b1, b2, b3, c1, c2, c3
 df_results
+
+
 
 
 
