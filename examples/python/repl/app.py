@@ -1,4 +1,6 @@
-import sympy, pandas, numpy
+import sympy, pandas, numpy, math, polysolver
+import polysolver as plsv
+
 from sympy import solve, Eq, symbols, latex, simplify, diff, poly, sympify, Matrix, pprint, collect, expand, Poly, Symbol, Pow
 def rall(sel=[0, 0, 0]):
     n, m = symbols('n m')
@@ -49,6 +51,7 @@ def genpolycoeffn(form,expr,solv):
     ABCDE[:len(polys)] = polys
     matarch = 0
     return ABCDE, abc, matarch, plr
+
 #genpolycoeffn(form=2,expr="alpha=k0+k1*g+k2*h",solv='g')
 
 def genpolycoeffr(elem,expr,solv,eur):
@@ -189,10 +192,49 @@ def genpolycoeffr(elem,expr,solv,eur):
     matarch[msl]=matarch[msl].astype(str)
     return ABCDE, abc, matarch, plr
 
-#genpolycoeffr(["g","h","alpha"],"z=k0+k1*x+k2*y+k3*x**2+k4*x*y+k5*y**2+k6*x**3+k7*x**2*y+k8*y**2*x+k9*y**3",'alpha',[1,2,4])
+# genpolycoeffr(["g","h","alpha"],"z=k0+k1*x+k2*y+k3*x**2+k4*x*y+k5*y**2+k6*x**3+k7*x**2*y+k8*y**2*x+k9*y**3",'alpha',[1,2,4])[2]
 
 def pareq(ste='(x + y*zeta)/(zeta + 1)', **kwargs):
     return eval(ste, kwargs)
 
-# pareq(ste='(a + b)*c', a=2, b=4, c=3)
+prv = ["g","h","alpha"]
+rve = [1, 2, 4]
+gra = [-44.9573,7.001545,-19.9677]
+eqs = ["z=k0+k1*x+k2*y+k3*x**2+k4*x*y+k5*y**2+k6*x**3+k7*x**2*y+k8*y**2*x+k9*y**3","alpha=k0+k1*g+k2*h+k3*Gamma"][0]
+sfo = ['g','h','alpha'][2]
+test = genpolycoeffr(elem=prv,expr=eqs,solv=sfo,eur=rve)
+m1v = math.cos(math.radians(gra[0]))
+m2v = math.cos(math.radians(gra[1]))
+m3v = math.cos(math.radians(gra[2]))
+n1v = math.sin(math.radians(gra[0]))
+n2v = math.sin(math.radians(gra[1]))
+n3v = math.sin(math.radians(gra[2]))
+m1v, m2v, m3v, n1v, n2v, n3v
+k0=0.001643394  
+k1=1.075717880 
+k2=-0.731335532
+k3=0.064912642  
+k4=0.064007760 
+k5=-0.785443920
+k6=0.092375583 
+k7=-1.271709722  
+k8=3.038048882
+k9=0.923841730
+
+# I
+a1 = pareq(ste=str(test[1][0]),m1=m1v,m2=m2v,m3=m3v,n1=n1v,n2=n2v,n3=n3v)
+a2 = pareq(ste=str(test[1][1]),m1=m1v,m2=m2v,m3=m3v,n1=n1v,n2=n2v,n3=n3v)
+a3 = pareq(ste=str(test[1][2]),m1=m1v,m2=m2v,m3=m3v,n1=n1v,n2=n2v,n3=n3v)
+b1 = pareq(ste=str(test[1][3]),m1=m1v,m2=m2v,m3=m3v,n1=n1v,n2=n2v,n3=n3v)
+b2 = pareq(ste=str(test[1][4]),m1=m1v,m2=m2v,m3=m3v,n1=n1v,n2=n2v,n3=n3v)
+b3 = pareq(ste=str(test[1][5]),m1=m1v,m2=m2v,m3=m3v,n1=n1v,n2=n2v,n3=n3v)
+c1 = pareq(ste=str(test[1][6]),m1=m1v,m2=m2v,m3=m3v,n1=n1v,n2=n2v,n3=n3v)
+c2 = pareq(ste=str(test[1][7]),m1=m1v,m2=m2v,m3=m3v,n1=n1v,n2=n2v,n3=n3v)
+c3 = pareq(ste=str(test[1][8]),m1=m1v,m2=m2v,m3=m3v,n1=n1v,n2=n2v,n3=n3v)
+
+
+a1, a2, a3, b1, b2, b3, c1, c2, c3
+
+
+
 
