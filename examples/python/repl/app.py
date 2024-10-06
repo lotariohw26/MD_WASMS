@@ -1,6 +1,7 @@
 import sympy, pandas, numpy, math, polysolver
+import pandas as pd
 import polysolver as plsv
-
+import math                                                                   
 from sympy import solve, Eq, symbols, latex, simplify, diff, poly, sympify, Matrix, pprint, collect, expand, Poly, Symbol, Pow
 def rall(sel=[0, 0, 0]):
     n, m = symbols('n m')
@@ -233,8 +234,30 @@ c2 = pareq(ste=str(test[1][7]),m1=m1v,m2=m2v,m3=m3v,n1=n1v,n2=n2v,n3=n3v)
 c3 = pareq(ste=str(test[1][8]),m1=m1v,m2=m2v,m3=m3v,n1=n1v,n2=n2v,n3=n3v)
 
 
-a1, a2, a3, b1, b2, b3, c1, c2, c3
 
+results = []
+for nr in range(20):  # Example: looping from 0 to 19, you can change the range as needed
+    lhs = test[2]['d'][nr]
+    rhs = test[2]['expr'][nr]
+    pareq_result = plsv.pareq(
+        str(rhs),
+        a1=a1, a2=a2, a3=a3,
+        b1=b1, b2=b2, b3=b3,
+        c1=c1, c2=c2, c3=c3,
+        k0=k0, k1=k1, k2=k2, k3=k3, k4=k4, k5=k5, k6=k6, k7=k7, k8=k8, k9=k9
+    )
+    # Append the result dictionary directly to the list
+    results.append({
+        'lhs': lhs,
+        'rhs': rhs,
+        'pareq_result': pareq_result
+    })
+
+df_results = pd.DataFrame(results)
+
+# Output
+a1, a2, a3, b1, b2, b3, c1, c2, c3
+df_results
 
 
 
