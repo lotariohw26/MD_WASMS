@@ -2,7 +2,7 @@ Shinylive
 ==========
 examples/index.json
 examples/python/repl/about.txt
-examples/python/repl/app.py
+examples/python/repl/poly.py
 examples/r/001-hello/app.R
 examples/r/002-text/app.R
 examples/r/003-reactivity/app.R
